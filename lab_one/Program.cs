@@ -25,7 +25,6 @@ namespace lab_one
                                      {"ASP.NET Core","UWP","Apache Spark","Tizen"},
                                      {".NET Core runtime", "ASP .NET runtime",".NET Core CLI tools","All of the above" },
                                      {"MIT license", "Apache License", "GNU Lesser Public License", "None of the above" }
-
                                     };
             string[] options = { "A) ", "B) ", "C) ", "D) " };
             string[] userSelection = new string[10];
@@ -84,7 +83,7 @@ namespace lab_one
 
                     //Presents their answers and the asnwer key side by side
                     Console.Clear();
-                    Console.WriteLine("\n\t|Question|Your Answer|Correct Answer|");
+                    Console.WriteLine("\n\t|Question #|Your Answer|Correct Answer|");
                     for(int i = 0; i < quizQuestions.Length; i++)
                     {
                         Console.Write("\t");
@@ -106,7 +105,7 @@ namespace lab_one
                             num = "0";
                         }
 
-                        Console.WriteLine("|"+ num + (i+1) + "      |" + userSelection[i] + "          |" + AnswerKey[i] + "             |");
+                        Console.WriteLine("|"+ num + (i+1) + "        |" + userSelection[i] + "          |" + AnswerKey[i] + "             |");
                         Console.BackgroundColor = ConsoleColor.Black;
                     }
 
@@ -125,6 +124,7 @@ namespace lab_one
 
                     bool answered = false;
 
+                    //Ask if they want to attempt the quiz again
                     while (!answered)
                     {
                         Console.WriteLine("Do you want to try again?(Y/N)");
@@ -141,7 +141,7 @@ namespace lab_one
                         }
                         else
                         {
-                            Console.WriteLine("Not a valid answer...");
+                            Console.WriteLine("Not a valid option...");
                         }
                     }
 
